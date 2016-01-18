@@ -1,30 +1,26 @@
-#include "reroSensor_HM.h"
-#include <SoftwareSerial.h>
-reroSensor_HM HM(2,3,8);
-void setup() {
-Serial.begin(9600);
-HM.begin(19200);
-pinMode(8,OUTPUT);
-delay(1000);// put your setup code here, to run once:
+# READ MIC MAX SENSOR() #
 
-}
+## Description ##
+This register save the maximum detected microphone value so far.
 
-void loop() 
-{
+## Include ##
+reroSensor_HM.h
 
-  byte VAL=HM.readMicMax(100);
-  Serial.print("Check Head Module Infared Error:");
-  Serial.println(HM.errStatus);
-  
+## Prototype ##
+byte readMicMax(byte ID);
 
-   if (HM.errStatus>0) { 
-    Serial.println("HM Reading Error!");
-    }
-  else
-  {
-      Serial.print(" VALUE:");
-    Serial.println(VAL);
-  }
-  delay(1000);
-  
-}
+## Parameters ##
+none
+
+## Returns ##
+Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+
+## Example ##
+byte readMicMax(100);
+100=(byte ID); //100 is rero head module sensor ID
+
+## See Also ##
+
+InstructionSet
+
+ReturnStatus
