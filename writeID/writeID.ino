@@ -1,30 +1,26 @@
-#include "reroSensor_HM.h"
-#include <SoftwareSerial.h>
-reroSensor_HM HM(2,3,8);
-void setup() {
-Serial.begin(9600);
-HM.begin(19200);
-pinMode(8,OUTPUT);
-delay(1000);// put your setup code here, to run once:
+# READ WRITE ID SENSOR() #
 
-}
+## Description ##
+This function is set new ID for Head Module Sensor.
 
-void loop() 
-{
+## Include ##
+reroSensor_HM.h
 
-  byte id=HM.writeID(100,101);
-  Serial.print("Check Head Module Infared Error:");
-  Serial.println(HM.errStatus);
-  
+## Prototype ##
+byte writeID(byte ID,byte NEW ID);
 
-   if (HM.errStatus>0) { 
-    Serial.println("HM Reading Error!");
-    }
-  else
-  {
-      Serial.print(" ID:");
-    Serial.println(id);
-  }
-  delay(1000);
-  
-}
+## Parameters ##
+none
+
+## Returns ##
+Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+
+## Example ##
+byte readIr(100);
+100=(byte ID); //100 is rero head module sensor ID
+
+## See Also ##
+
+InstructionSet
+
+ReturnStatus
