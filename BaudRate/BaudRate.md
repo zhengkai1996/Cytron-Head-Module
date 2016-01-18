@@ -11,7 +11,7 @@ byte readBaudRate(byte ID);
 
 ## Parameters ##
 
-ID
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
 Return BaudRate Value Data
@@ -37,6 +37,7 @@ baud= HM.readBaudRate(100); // read ID 100 control registor BaudRate Value
 
 ## See Also ##
 
-[Instruction Set](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/instruction%20set.md)
+[errStatus]
+
 
 
