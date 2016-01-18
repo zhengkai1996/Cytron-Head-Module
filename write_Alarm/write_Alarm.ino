@@ -1,30 +1,26 @@
-#include "reroSensor_HM.h"
-#include <SoftwareSerial.h>
-reroSensor_HM HM(2,3,8);
-void setup() {
-Serial.begin(9600);
-HM.begin(19200);
-pinMode(8,OUTPUT);
-delay(1000);// put your setup code here, to run once:
+# READ WRITE ALARM SENSOR() #
 
-}
+## Description ##
+The bits in Alarm register if set will cause the Head eyes to blink on that particular error. 
 
-void loop() 
-{
+## Include ##
+reroSensor_HM.h
 
-  byte VAL=HM.writeAlarm(100,New Val);
-  Serial.print("Check Head Module Infared Error:");
-  Serial.println(HM.errStatus);
-  
+## Prototype ##
+byte writeAlarm(byte ID,byte T);
 
-   if (HM.errStatus>0) { 
-    Serial.println("HM Reading Error!");
-    }
-  else
-  {
-      Serial.print(" VALUE:");
-    Serial.println(VAL);
-  }
-  delay(1000);
-  
-}
+## Parameters ##
+none
+
+## Returns ##
+Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+
+## Example ##
+byte writeAlarm(byte 100,byte 8);
+100=(byte ID); //100 is rero head module sensor ID
+8=(byte 8); // 8 is rero head module alarm sensor value
+
+## See Also ##
+InstructionSet
+
+ReturnStatus
