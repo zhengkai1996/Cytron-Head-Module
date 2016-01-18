@@ -21,14 +21,14 @@ Return BaudRate Val
 
 |RegisterValue(Hex)|BaudRate(bps)|Error(%)|
 |:-----------------|:------------|:-------|
-|3   (0x03)|500,000       |Used to obtain a status packet|
-|4   (0x04)|400,000       |Read values from Control Register|
-|7   (0x07)|250,000       |Write values to Control Register|
-|9   (0x09)|200,000       |Similar to WRITE\_DATA instruction but pending execution until iACTION Instruction is called|
-|16  (0x10)|115,200       |Triggers the pending action registered by REG\_WRITE instruction|
-|34  (0x22)|57,600        |Resetting the Control Register values to factory defaults|
-|103 (0x67)|19,200        |Controlling multiple G15 in one single instruction packet|
-|207 (0xCF)|9600          |Controlling multiple G15 in one single instruction packet|
+|3   (0x03)|500,000       |0|
+|4   (0x04)|400,000       |0|
+|7   (0x07)|250,000       |0|
+|9   (0x09)|200,000       |0|
+|16  (0x10)|115,200       |2.12|
+|34  (0x22)|57,600        |-0.79|
+|103 (0x67)|19,200        |0.16|
+|207 (0xCF)|9600          |0.16|
 
 
 ## Example ##
