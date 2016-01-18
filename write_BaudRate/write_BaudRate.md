@@ -7,7 +7,7 @@ This function sets head module control registers baudrate .
 reroSensor_HM.h
 
 ## Prototype ##
-byte write(byte ID,byte BR);
+byte writebaudRate(byte ID,byte BR);
 
 ## Parameters ##
 none
@@ -16,7 +16,7 @@ none
 Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
 
 ## Example ##
-byte write(byte 100,byte 103);
+byte writebaudRate(byte 100,byte 103);
 100=(byte ID); //100 is rero head module sensor ID
 103=(byte BR); //103 is 9600 BaudRate
 ## See Also ##
