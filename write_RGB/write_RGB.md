@@ -16,7 +16,7 @@ none
 Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
 
 ## Example ##
-byte writeRGB(byte 100,byte 103);
+byte writeRGB(byte 100,byte 0);
 100=(byte ID); //100 is rero head module sensor ID
 0=(byte colour); //0bit is Blue Colour
 ## See Also ##
