@@ -1,7 +1,7 @@
 # READ WRITE LR EYE SENSOR() #
 
 ## Description ##
-This function sets head module control registers LR EYE . 
+This function sets head module control registers Left or Right EYE . 
 
 ## Include ##
 reroSensor_HM.h
