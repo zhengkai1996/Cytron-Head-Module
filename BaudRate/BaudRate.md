@@ -17,7 +17,7 @@ Parameter2 ；
 Length of data in byte to be read;
 
 ## Returns ##
-Return BaudRate Val
+Return BaudRate Value Data
 
 |RegisterValue(Hex)|BaudRate(bps)|Error(%)|
 |:-----------------|:------------|:-------|
