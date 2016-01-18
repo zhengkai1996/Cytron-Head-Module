@@ -1,30 +1,25 @@
-#include "reroSensor_HM.h"
-#include <SoftwareSerial.h>
-reroSensor_HM HM(2,3,8);
-void setup() {
-Serial.begin(9600);
-HM.begin(19200);
-pinMode(8,OUTPUT);
-delay(1000);// put your setup code here, to run once:
+# PING() #
 
-}
+## Description ##
+To request the status packet from a head module sensor. The data byte is passed by pointer and it will be overwritten with ID of the sensor if successful.
 
-void loop() 
-{
+## Include ##
+reroSensor_HM.h
 
-  byte id=HM.ping();
-  Serial.print("Check Head Module Infared Error:");
-  Serial.println(HM.errStatus);
-  
+## Prototype ##
+byte ping(void);
 
-   if (HM.errStatus>0) { 
-    Serial.println("HM Reading Error!");
-    }
-  else
-  {
-      Serial.print(" ID:");
-    Serial.println(id);
-  }
-  delay(1000);
-  
-}
+## Parameters ##
+none
+
+## Returns ##
+Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+
+## Example ##
+byte ping();
+
+## See Also ##
+
+InstructionSet
+
+ReturnStatus
