@@ -1,30 +1,26 @@
-#include "reroSensor_HM.h"
-#include <SoftwareSerial.h>
-reroSensor_HM HM(2,3,8);
-void setup() {
-Serial.begin(9600);
-HM.begin(19200);
-pinMode(8,OUTPUT);
-delay(1000);// put your setup code here, to run once:
+# READ WRITE BAUDRATE SENSOR() #
 
-}
+## Description ##
+This function sets head module control registers baudrate . 
 
-void loop() 
-{
+## Include ##
+reroSensor_HM.h
 
-  byte VAL=HM.writeBaudRate(100,New BaudRate);
-  Serial.print("Check Head Module Infared Error:");
-  Serial.println(HM.errStatus);
-  
+## Prototype ##
+byte write(byte ID,byte BR);
 
-   if (HM.errStatus>0) { 
-    Serial.println("HM Reading Error!");
-    }
-  else
-  {
-      Serial.print(" VALUE:");
-    Serial.println(VAL);
-  }
-  delay(1000);
-  
-}
+## Parameters ##
+none
+
+## Returns ##
+Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+
+## Example ##
+byte write(byte 100,byte 103);
+100=(byte ID); //100 is rero head module sensor ID
+103=(byte BR); //103 is 9600 BaudRate
+## See Also ##
+
+InstructionSet
+
+ReturnStatus
