@@ -22,6 +22,6 @@ byte readbaudRate(100);
 
 ## See Also ##
 
-InstructionSet
+[Instruction Set](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/instruction%20set.md)
 
 ReturnStatus
