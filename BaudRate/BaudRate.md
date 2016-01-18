@@ -12,8 +12,11 @@ byte readBaudRate(byte ID);
 ## Parameters ##
 
 Parameter1 ；
+
 Starting address data to be read;
+
 Parameter2 ；
+
 Length of data in byte to be read;
 
 ## Returns ##
@@ -32,7 +35,8 @@ Return BaudRate Value Data
 
 
 ## Example ##
-byte stat
+byte stat;
+
 stat=byte readBaudRate(100); // read ID 100 control registor BaudRate Value
 
 ## See Also ##
