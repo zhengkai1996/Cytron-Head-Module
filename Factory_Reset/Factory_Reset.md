@@ -24,7 +24,7 @@ reroSensor_HM HM(2,3,8);
 
 byte stat;
 
-stat= HM.factoryReset(100); // read ID 100 control registor factory Reset
+stat= HM.factoryReset(100); // read ID 100 control register factory Reset
 
 ## See Also ##
 
