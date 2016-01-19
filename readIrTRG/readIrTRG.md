@@ -10,10 +10,10 @@ reroSensor_HM.h
 byte readIrTRG(byte ID);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+return
 
 ## Example ##
 byte readIrTRG(100);
