@@ -11,17 +11,18 @@ reroSensor_HM.h
 byte readMicVal(byte ID);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+return packet from sensor for Mic value 
 
 ## Example ##
-byte readMicVal(100);
-100=(byte ID); //100 is rero head module sensor ID
+reroSensor_HM HM(2,3,8);
+
+byte Mic
+
+Mic=readMicVal(100); //reading Mic Value form ID 100 Head Module Sensor
 
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
