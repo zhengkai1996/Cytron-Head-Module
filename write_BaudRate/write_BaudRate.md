@@ -10,17 +10,31 @@ reroSensor_HM.h
 byte writeBaudRate(byte ID,byte BR);
 
 ## Parameters ##
-none
-
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
+byte BR; //byte BR is New BaudRate Value
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+
+if return new BaudRate Value Frist time ,it is writing Success 
+
+|RegisterValue(Hex)|BaudRate(bps)|
+|:-----------------|:------------|
+|3   (0x03)|500,000       |
+|4   (0x04)|400,000       |
+|7   (0x07)|250,000       |
+|9   (0x09)|200,000       |
+|16  (0x10)|115,200       |
+|34  (0x22)|57,600        |
+|103 (0x67)|19,200        |
+|207 (0xCF)|9600          |
 
 ## Example ##
-byte writeBaudRate(byte 100,byte 103);
-100=(byte ID); //100 is rero head module sensor ID
-103=(byte BR); //103 is 9600 BaudRate
+reroSensor_HM HM(2,3,8);
+
+byte Baud
+
+Baud=HM.writeBaudRate(100,103);//Set ID 100 Head Module Sensor to 19200 bps .
+
 ## See Also ##
 
-InstructionSet
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
 
-ReturnStatus
