@@ -14,6 +14,10 @@ byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
  return packet from sensor
+ 
+|0xFF|0xFF|0x64|0x02|0x00|0x99|
+|:---|:---|:---|:---|:---|:---|
+|Header||ID  |Length|Error|Checksum|
 
 
 ## Example ##
