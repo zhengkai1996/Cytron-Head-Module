@@ -16,7 +16,10 @@ byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 return Mic Max Value
 
 ## Example ##
+reroSensor_HM HM(2,3,8);
+
 byte Mic
+
 Mic=HM.readMicMax(100); //reading ID 100 head module sensor for MIc MAX Value
 
 ## See Also ##
