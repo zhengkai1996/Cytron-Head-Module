@@ -11,17 +11,16 @@ reroSensor_HM.h
 byte readIr(byte ID);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+return packet from sensor for read IR value
 
 ## Example ##
-byte readIr(100);
-100=(byte ID); //100 is rero head module sensor ID
+byte IR
+
+IR=HM.readIr(100); //reading Ir value for ID 100 Head Module Sensor
 
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
