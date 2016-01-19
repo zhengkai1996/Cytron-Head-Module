@@ -13,14 +13,15 @@ byte readIrTRG(byte ID);
 byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-return
+return Ir TRG defualt value 
 
 ## Example ##
-byte readIrTRG(100);
-100=(byte ID); //100 is rero head module sensor ID
+reroSensor_HM HM(2,3,8);
+
+byte IrTRG
+
+IrTRG=HM.readIrTRG(100); //reading Ir TRG value form ID 100 Head Module Sensor
 
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
