@@ -13,19 +13,26 @@ word readModel(ID);
 byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-return model Land model H default value
+return model L and model H default value
+
+model L return M
+
+model H return H
 
 ## Example ##
 reroSensor_HM HM(2,3,8);
 
-char modelHM[3]={0,0,0};//null terminated string 
+char modelHM[3]={0,0,0}; //null terminated string 
 
 word model
+
 model=HM.readModel(100);// read ID 100 control registor
 
 modelHM[1]=(char)model&0x00FF;
   
 modelHM[0]=(char)(model>>8);
+
+Serial.println(modelHM);
   
 ## See Also ##
 [errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
