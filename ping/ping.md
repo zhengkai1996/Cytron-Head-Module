@@ -13,9 +13,9 @@ byte ping(void);
 none
 
 ## Returns ##
-if 0 return headmodule sensor unique ID
+if 0 return HM sensor reading unique ID
 
-if 1 return HM reading error
+if 1 return HM sensor reading error
 ## Example ##
 byte ping();
 
