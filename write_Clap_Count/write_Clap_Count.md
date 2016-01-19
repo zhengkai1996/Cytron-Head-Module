@@ -10,17 +10,23 @@ reroSensor_HM.h
 byte writeClapCount(byte ID,byte CC );
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
+
+byte CC;//byte CC is New Clap Count Value
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+Frist time,you will display a ramdom value. It mean your already change new Value
+
+Then,Return HM Sensor Reading Error
+
 
 ## Example ##
-byte writeClapCount(byte 100,byte 150);
-100=(byte ID); //100 is rero head module sensor ID
-150=(byte CC); //150 is Clap Count Value
+reroSensor_HM HM(2,3,8);
+
+byte CC
+
+CC=HM.writeClapCount(100,103) ; set ID 100 Head Module Sensor to 103 Clap Count Value
+
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
