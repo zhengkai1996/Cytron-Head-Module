@@ -21,6 +21,8 @@ return LR eye value
 
 
 ## Example ##
+reroSensor_HM HM(2,3,8);
+
 byte LR
 
 LR=HM.readLR(100); //reading LR Lens form ID 100 Head Module Sensor
