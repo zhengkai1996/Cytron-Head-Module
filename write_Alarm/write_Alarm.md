@@ -7,20 +7,23 @@ The bits in Alarm register if set will cause the Head eyes to blink on that part
 reroSensor_HM.h
 
 ## Prototype ##
-byte writeAlarm(byte ID,byte T);
+byte writeAlarm(byte ID,byte New Val);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
+
+byte New Val; // byte New Val is Setting Value 
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+return Alarm New Setting Value
 
 ## Example ##
-byte writeAlarm(byte 100,byte 8);
-100=(byte ID); //100 is rero head module sensor ID
-8=(byte 8); // 8 is rero head module alarm sensor value
+reroSensor_HM HM(2,3,8);
+
+byte Alarm
+
+Alarm=HM.writeAlarm(100,101)// Set ID 100 Head Module Sensor Value to 101
 
 ## See Also ##
-InstructionSet
 
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
