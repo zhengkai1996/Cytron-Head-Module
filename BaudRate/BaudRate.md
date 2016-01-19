@@ -37,7 +37,7 @@ baud= HM.readBaudRate(100); // read ID 100 control registor BaudRate Value
 
 ## See Also ##
 
-[errStatus]
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
 
 
 
