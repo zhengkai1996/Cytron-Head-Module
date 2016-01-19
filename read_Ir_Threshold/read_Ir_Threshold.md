@@ -10,17 +10,15 @@ reroSensor_HM.h
 byte readIrThres(byte ID);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+return IR Threshold Value
 
 ## Example ##
-byte readIrThres(100);
-100=(byte ID); //100 is rero head module sensor ID
+byte Ir
+Ir=readIrThres(100); //reading ID 100 Head Module Sensor Ir Threshold Value
 
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
