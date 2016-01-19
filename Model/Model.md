@@ -7,23 +7,26 @@ The two byte register contains ASCII character to recognize the sensor type. ‘
 reroSensor_HM.h
 
 ## Prototype ##
-word model=HM.readModel(ID);
-  modelHM[1]=(char)model&0x00FF;
-  modelHM[0]=(char)(model>>8);
+word readModel(ID);
   
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+return model Land model H default value
 
 ## Example ##
-word model=HM.readModel(100);
+reroSensor_HM HM(2,3,8);
+
+char modelHM[3]={0,0,0};
+
+word model
+model=HM.readModel(100);// read ID 100 control registor
+
 modelHM[1]=(char)model&0x00FF;
+  
 modelHM[0]=(char)(model>>8);
   
 ## See Also ##
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
 
-InstructionSet
-
-ReturnStatus
