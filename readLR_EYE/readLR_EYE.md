@@ -10,17 +10,21 @@ reroSensor_HM.h
 byte readLR(byte ID);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+return LR eye value
+
+|bit|7  |6  |5  |4  |3  |2  |1  |0  |
+|:--|:--|:--|:--|:--|:--|:--|:--|:--|
+|||||||||Right Eye|Left Eye|
+
 
 ## Example ##
-byte readLR(100);
-100=(byte ID); //100 is rero head module sensor ID
+byte LR
+
+LR=HM.readLR(100); //reading LR Lens form ID 100 Head Module Sensor
 
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
