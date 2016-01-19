@@ -18,7 +18,7 @@ return model Land model H default value
 ## Example ##
 reroSensor_HM HM(2,3,8);
 
-char modelHM[3]={0,0,0};
+char modelHM[3]={0,0,0};//null terminated string 
 
 word model
 model=HM.readModel(100);// read ID 100 control registor
