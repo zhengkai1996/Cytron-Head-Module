@@ -10,18 +10,21 @@ reroSensor_HM.h
 byte writeID(byte ID,byte NEW ID);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
+byte NEW ID; //byte NEW ID is HEAD MODULE SENSOR NEW ID
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+Frist time Return Ramdom Value
+
+Then Return HM Sensor Reading Error
 
 ## Example ##
-byte writeID(100,101);
-100=(byte ID); //100 is rero head module sensor ID
-101=(byte NEW ID); //101 is new ID for head module sensor
+reroSensor_HM HM(2,3,8);
 
+byte stat;
+
+stat= HM.writeID(100,101); // set ID 100 Head Module Senor to 101 New ID
 ## See Also ##
 
-InstructionSet
 
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
