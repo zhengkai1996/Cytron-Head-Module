@@ -10,18 +10,20 @@ reroSensor_HM.h
 byte factoryReset(byte ID);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-Error status in word. If return is non-zero, error occurred. Refer ReturnStatus.
+ return packet from sensor
+
 
 ## Example ##
-byte factoryReset(100);
+reroSensor_HM HM(2,3,8);
 
-100=(byte ID);  //rero head module sensor ID
+byte stat;
+
+stat= HM.factoryReset(100); // read ID 100 control registor factory Reset
 
 ## See Also ##
 
-InstructionSet
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
 
-ReturnStatus
