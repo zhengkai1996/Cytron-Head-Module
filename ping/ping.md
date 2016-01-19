@@ -13,13 +13,12 @@ byte ping(void);
 none
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+if 0 return headmodule sensor unique ID
 
+if 1 return HM reading error
 ## Example ##
 byte ping();
 
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
