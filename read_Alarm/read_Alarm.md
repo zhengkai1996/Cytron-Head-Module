@@ -11,17 +11,18 @@ reroSensor_HM.h
 byte readAlarm(byte ID);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+return alarm value
 
 ## Example ##
-byte readAlarm(100);
-100=(byte ID); //100 is rero head module sensor ID
+reroSensor_HM HM(2,3,8);
+
+byte Alarm
+
+Alarm=HM.readAlarm(100); //reading alarm value form ID 100 Head Module Sensor
 
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
