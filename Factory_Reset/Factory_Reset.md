@@ -15,10 +15,9 @@ byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 ## Returns ##
  return packet from sensor
  
-|0xFF|0xFF|0x64|0x02|0x00|0x99|
-|:---|:---|:---|:---|:---|:---|
-|Header||ID  |Length|Error|Checksum|
+if return 0 ,serial monitor print out Factory Reset ERROR!
 
+if return 1,serial monitor print out Factory Reset Success!
 
 ## Example ##
 reroSensor_HM HM(2,3,8);
