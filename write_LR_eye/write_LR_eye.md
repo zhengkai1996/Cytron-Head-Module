@@ -10,17 +10,22 @@ reroSensor_HM.h
 byte writeLR(byte ID,byte eye);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
+
+byte eye; //byte eye is HEAD MODULE SENSOR NEW LR Lens value
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+Frist time Return Ramdom Value
+
+Then Return HM Sensor Reading Error
 
 ## Example ##
-byte writeBaudRate(byte 100,byte 0);
-100=(byte ID); //100 is rero head module sensor ID
-0=(byte eye); //0bit is left eye and 1bit is right eye  
+reroSensor_HM HM(2,3,8);
+
+byte Baud
+
+Baud= HM.writeBaudRate(100,103); // set ID 100 Head Module Senor to 19200 bps New BaudRate value
+
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
