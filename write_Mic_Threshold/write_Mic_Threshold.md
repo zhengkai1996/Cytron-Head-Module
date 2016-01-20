@@ -10,17 +10,22 @@ reroSensor_HM.h
 byte writeMicThres(byte ID,byte IR);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
+
+byte IR; //byte IR is HEAD MODULE SENSOR NEW Mic Threshold value
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+Frist time Return Ramdom Value
+
+Then Return HM Sensor Reading Error
 
 ## Example ##
-byte writeBaudRate(byte 100,byte 103);
-100=(byte ID); //100 is rero head module sensor ID
-103=(byte IR); //103 is new value for Mic Threshold
+reroSensor_HM HM(2,3,8);
+
+byte Mic
+
+Mic= HM.writeMicThres(100,101); // set ID 100 Head Module Senor to 101 New Mic Threshold value
+
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
