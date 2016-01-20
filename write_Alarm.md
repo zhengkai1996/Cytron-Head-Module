@@ -15,8 +15,9 @@ byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 byte New Val; // byte New Val is Setting Value 
 
 ## Returns ##
-return Alarm New Setting Value
+Frist time Return Ramdom Value
 
+Then Return HM Sensor Reading Error
 ## Example ##
 reroSensor_HM HM(2,3,8);
 
