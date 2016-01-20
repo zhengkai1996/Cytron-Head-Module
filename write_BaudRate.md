@@ -14,7 +14,9 @@ byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 byte BR; //byte BR is New BaudRate Value
 ## Returns ##
 
-if return new BaudRate Value Frist time ,it is writing Success 
+Frist time Return Ramdom Value
+
+Then Return HM Sensor Reading Error
 
 |RegisterValue(Hex)|BaudRate(bps)|
 |:-----------------|:------------|
