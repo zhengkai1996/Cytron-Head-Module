@@ -10,17 +10,29 @@ reroSensor_HM.h
 byte writeRGB(byte ID,byte colour);
 
 ## Parameters ##
-none
+byte ID; //byte ID is HEAD MODULE SENSOR unique ID
+
+byte colour; //byte Ir is HEAD MODULE SENSOR NEWcolour value
+
+
+|bit|7  |6  |5  |4  |3  |2  |1  |0  |
+|:--|:--|:--|:--|:--|:--|:--|:--|:--|
+|colour|red|red|red|green|green|green|blue|blue|blue|
+
 
 ## Returns ##
-Error status in byte. If return is non-zero, error occurred. Refer ReturnStatus.
+Frist time Return Ramdom Value
+
+Then Return HM Sensor Reading Error
+
 
 ## Example ##
-byte writeRGB(byte 100,byte 0);
-100=(byte ID); //100 is rero head module sensor ID
-0=(byte colour); //0bit is Blue Colour
+reroSensor_HM HM(2,3,8);
+
+byte RGB
+
+RGB= HM.writeRGB(100,101); // set ID 100 Head Module Senor to 101 RGB value
+
 ## See Also ##
 
-InstructionSet
-
-ReturnStatus
+[errStatus](https://github.com/zhengkai1996/Cytron-Head-Module/blob/wiki/errStatus.md)
