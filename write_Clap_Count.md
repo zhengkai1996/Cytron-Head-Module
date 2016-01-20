@@ -1,4 +1,4 @@
-# READ WRITE CLAP COUNT SENSOR() #
+#WRITE CLAP COUNT SENSOR() #
 
 ## Description ##
 This function sets head module control registers Clap count sensor . 
@@ -15,9 +15,9 @@ byte ID; //byte ID is HEAD MODULE SENSOR unique ID
 byte CC;//byte CC is New Clap Count Value
 
 ## Returns ##
-Frist time,you will display a ramdom value. It mean your already change new Value
+Frist time Return Ramdom Value
 
-Then,Return HM Sensor Reading Error
+Then Return HM Sensor Reading Error
 
 
 ## Example ##
